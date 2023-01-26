@@ -1,0 +1,181 @@
+<html>
+  <body>
+    <canvas width="2000" height="1000"></canvas>
+
+    <script>
+      let canvas = document.querySelector('canvas');
+      let context = canvas.getContext('2d');
+
+      context.fillRect(0, 0, 2000, 1000)
+
+      // context.beginPath();
+      // context.arc(300, 300, 150, 0, Math.PI * 2);
+      // context.strokeStyle = 'white';
+      // context.lineWidth = 10
+      // context.stroke();
+
+      // context.lineWidth = 4;
+      // context.strokeStyle = 'black';
+      // context.beginPath();
+      // context.rect(50, 50, 350, 350);
+      // context.stroke();
+
+      // context.beginPath();
+      // context.arc(300, 300, 100, 0, Math.PI * 2);
+      // context.fillStyle = 'black';
+      // context.fill();
+
+      // context.beginPath();
+      // context.arc(200, 200, 60, 0, Math.PI * 2);
+      // context.fillStyle = 'gray';
+      // context.fill();
+
+      // context.beginPath();
+      // context.arc(400, 400, 60, 0, Math.PI * 2);
+      // context.fillStyle = 'gray';
+      // context.fill();
+
+      // for (let i = 0; i < 20; i++){
+      //   if (i % 2 == 0) {
+      //     context.strokeStyle = 'green';
+      //   } else {
+      //     context.strokeStyle = 'black';
+      //   }
+      //   context.beginPath();
+      //   context.rect(50 + 20 * i, 50 + 20 * i, 60, 60);
+      //   context.stroke();
+      // }
+
+      const width = 30;
+      const height = 30;
+      const gap = 10;
+      let x, y;
+
+      for (let i = 0; i < 50; i++) {
+        for (let j = 0; j < 25; j++){
+          
+          x = 10 + (width + gap) * i;
+          y = 10 + (height + gap) * j;
+
+          if (Math.random() > 0.4) {
+            if (Math.random() > 0.9) {
+              context.fillStyle = 'white';
+            } else if (Math.random() > 0.8) {
+              context.fillStyle = 'orange';
+            } else if (Math.random() > 0.7) {
+              context.fillStyle = 'red';
+            } else if (Math.random() > 0.6) {
+              context.fillStyle = 'blue';
+            } else if (Math.random() > 0.6) {
+              context.fillStyle = 'green';
+            } else if (Math.random() > 0.5) {
+              context.fillStyle = 'purple';
+            } else if (Math.random() > 0.5) {
+              context.fillStyle = 'teal';
+            } else {
+              context.fillStyle = 'gray';
+            }
+            context.beginPath();
+            context.roundRect(x + 5, y + 5, width/1.5, height/1.5, [4]);
+            context.fill();
+            }
+
+          if (Math.random() > 0.4) {
+            if (Math.random() > 0.9) {
+              context.strokeStyle = 'white';
+            } else if (Math.random() > 0.8) {
+              context.strokeStyle = 'orange';
+            } else if (Math.random() > 0.7) {
+              context.strokeStyle = 'red';
+            } else if (Math.random() > 0.6) {
+              context.strokeStyle = 'blue';
+            } else if (Math.random() > 0.6) {
+              context.strokeStyle = 'green';
+            } else if (Math.random() > 0.5) {
+              context.strokeStyle = 'purple';
+            } else if (Math.random() > 0.5) {
+              context.strokeStyle = 'teal';
+            } else {
+              context.strokeStyle = 'gray';
+            }
+            context.beginPath();
+            context.roundRect(x + 10, y + 10, width/3, height/3, [2]);
+            context.stroke();
+            }
+
+            context.lineWidth = 3;
+          if(Math.random() > 0.5){
+            if (Math.random() > 0.9) {
+              context.strokeStyle = 'white';
+            } else if (Math.random() > 0.8) {
+              context.strokeStyle = 'orange';
+            } else if (Math.random() > 0.7) {
+              context.strokeStyle = 'red';
+            } else if (Math.random() > 0.6) {
+              context.strokeStyle = 'blue';
+            } else if (Math.random() > 0.6) {
+              context.strokeStyle = 'green';
+            } else if (Math.random() > 0.5) {
+              context.strokeStyle = 'purple';
+            } else if (Math.random() > 0.5) {
+              context.strokeStyle = 'teal';
+            } else {
+              context.strokeStyle = 'gray';
+            }
+            context.beginPath();
+            context.roundRect(x, y, width, height, [4]);
+            context.stroke();
+            }
+        }
+      }
+
+
+      let year = 2042;
+      let nextYear = year + 1;
+
+      let dinner = "pasta";
+      let sentence = "Tonight dinner will be " + dinner;
+
+      function saySomething(param) {
+        console.log(param);
+      }
+
+      saySomething(sentence);
+
+      function add (a, b) {
+        return a + b
+      }
+
+      let result = add(5, 7)
+      console.log(result)
+
+      let multiply = (a, b) => {
+        return a * b;
+      }
+
+      console.log(multiply(5, 7));
+
+      let years = [];
+      let menu = ['starter', 'main', 'dessert', 'drinks', 'sides'];
+
+      for (let i = 0; i < menu.length; i++) {
+        console.log(menu[i]);
+      }
+
+      for (let i = 0; i < 10; i++) {
+        years.push(2040 + i);
+      }
+
+      console.log(years);
+
+      menu.forEach(item => {
+        console.log(item);
+      })
+
+      const gravity = 9.81;
+      let velocity = 0.0;
+
+    </script>
+
+  </body>
+</html>
